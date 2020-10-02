@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+<<<<<<< HEAD
 *,
 *:before,
 *:after {
@@ -23,6 +24,10 @@
 
 body {
     background-color: #f2f2f2;
+=======
+body {
+    background: #f2f2f2;
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
 }
 
 a {
@@ -33,15 +38,22 @@ a {
 header {
     max-height: 100px;
     background: #1b1b1b;
+<<<<<<< HEAD
+=======
+    box-shadow: 5px 5px 4px #3d3c3c;
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
     color: aliceblue;
     display: flex;
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .nav-header {
     box-shadow: 5px 5px 4px #3d3c3c;
 }
 
+=======
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
 header h1 {
     margin: 20px 40px;
     font-size: x-large;
@@ -52,11 +64,16 @@ header h1 span {
 }
 
 header a:hover {
+<<<<<<< HEAD
+=======
+    /* color: white; */
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
     padding: 7px 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 600px) {
     header h1 {
         margin: 15px 20px;
@@ -196,6 +213,20 @@ ChatBot CSS OVER
 ********************************/
 
 #text {
+=======
+.container {
+    margin: 10px auto;
+    max-width: 800px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0096fe;
+}
+
+#text {
+    width: 300px;
+    height: 35px;
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
     border-radius: 10px;
 }
 
@@ -221,8 +252,13 @@ ChatBot CSS OVER
     padding: 5px 15px;
     border-radius: 4px;
     cursor: pointer;
+<<<<<<< HEAD
     /* margin: 10px; */
     font-size: medium;
+=======
+    margin: 10px;
+    font-size: larger;
+>>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
 }
 
 .btn-hover:hover {
