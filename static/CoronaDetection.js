@@ -1,6 +1,5 @@
 console.log("Corona Detection Enabled !");
 
-<<<<<<< HEAD
 function getUserReq(e) {
     // e.preventDefault()
     const request = document.getElementById("text").value
@@ -12,8 +11,5 @@ function getUserReq(e) {
 
 
 if (response === "Bye") {
-=======
-if (test === "Bye") {
->>>>>>> fc97fcbd403d3f77b16196b011f46af9fbf921ca
     console.log("function call successful")
 }
