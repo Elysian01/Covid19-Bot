@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/CoronaDetection.js"></script>
     <script>
         var response = '{{ val }}';
-        const userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + response + "</div></div></div>"
-        console.log("work")
+        if (chat.length == 1 && response == "Bye")
+            console.log("Chat Bot On")
+        else {
+            updateChat(response, "rasa")
+            displayChat()
+            window.scrollTo(0, 480);
+        }
     </script>
     <link rel="stylesheet" href="../static/styles.css">
-    <script src="../static/CoronaDetection.js"></script>
 
     <title>COVID BOT</title>
 </head>
@@ -47,33 +52,48 @@
                         </div>
                     </div>
 
+
+                    <!-- <div class="msg left-msg">
+                        <div class="msg-bubble">
+                            <div class="msg-text">
+                                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="msg right-msg">
                         <div class="msg-bubble">
                             <div class="msg-text">
                                 You can change your name in JS section!
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <script>
-                        document.querySelector(".msger-chat").innerHTML += userInput
-                    </script>
+
 
                 </main>
 
                 <form class="msger-inputarea" onsubmit="getUserReq(event)">
-                    <input type="text" class="msger-input" id="text" name="text" placeholder="Enter your message...">
+                    <input type="text" class="msger-input" id="text" name="text" autofocus placeholder="Enter your message...">
                     <button type="submit" class="msger-send-btn">Send</button>
                 </form>
-                <h1>{{val}}</h1>
             </section>
         </div>
+
+        <br><br><br>
     </main>
 
+    <script>
+        document.querySelector(".msger-chat").innerHTML += msg
+        chatWindow = document.querySelector(".msger-chat");
+        var xH = chatWindow.scrollHeight;
+        chatWindow.scrollTo(0, xH);
+    </script>
 
     <footer>
 
     </footer>
+
 
 </body>
 
