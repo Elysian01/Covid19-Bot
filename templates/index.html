@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        var test = '{{ val }}';
+        var response = '{{ val }}';
+        const userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + response + "</div></div></div>"
+        console.log("work")
     </script>
     <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/CoronaDetection.js"></script>
+
     <title>COVID BOT</title>
 </head>
 
 <body>
-    <header>
+    <header class="nav-header">
         <div class="heading">
             <h1><span>COVID-19</span> BOT</h1>
         </div>
@@ -22,26 +26,56 @@
     </header>
 
     <br><br>
+
     <main>
         <div class="container">
+            <section class="msger">
+                <header class="msger-header">
+                    <div class="msger-header-title">
+                        <h3> <span>COVID-19</span> BOT</h3>
+                    </div>
+                    <button class="btn-gold">Want to know what all i can do ?</button>
 
-            <div class="inputs">
-                <form>
+                </header>
 
-                    <input type="text" id="text" name="text">
-                    <!-- <h1 id="response">{{val}}</h1> -->
+                <main class="msger-chat">
+                    <div class="msg left-msg">
+                        <div class="msg-bubble">
+                            <div class="msg-text">
+                                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="btn-primary btn-lg">Send</button>
+                    <div class="msg right-msg">
+                        <div class="msg-bubble">
+                            <div class="msg-text">
+                                You can change your name in JS section!
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.querySelector(".msger-chat").innerHTML += userInput
+                    </script>
+
+                </main>
+
+                <form class="msger-inputarea" onsubmit="getUserReq(event)">
+                    <input type="text" class="msger-input" id="text" name="text" placeholder="Enter your message...">
+                    <button type="submit" class="msger-send-btn">Send</button>
                 </form>
-            </div>
+                <h1>{{val}}</h1>
+            </section>
         </div>
     </main>
+
+
 
 
     <footer>
 
     </footer>
-    <script src="../static/CoronaDetection.js"></script>
 </body>
 
 </html>
