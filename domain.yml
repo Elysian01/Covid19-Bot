@@ -21,6 +21,12 @@ intents:
 - corona_distance
 - prevent_corona
 - medicines
+- detect_corona
+- corona_state
+
+
+entities:
+   - state 
 
 
 responses:
@@ -42,8 +48,9 @@ responses:
   - text: I am a COVID bot
 
   utter_help:
-  - text: I can answer to questions related to what is corona, symptoms, its spreading in warm weather or in general,
-             who are at high risk 
+  - text: I can answer to questions related to what is corona, its symptoms, preventive measures, its spreading in
+             warm weather or in general, who are at high risk, <br><br><b> I can also check whether u are suffering from 
+             corona or not ( type -> corona test)</b>
 
   utter_medicines:
   - text: No pharmaceutical products have yet been shown to be safe and effective for the treatment of COVID-19.
@@ -88,7 +95,16 @@ responses:
        in the community (“community spread”) in some affected geographic areas. Community
        spread means people have been infected with the virus in an area, including
        some who are not sure how or where they became infected.
-       
+  
+  utter_detect_corona:
+  - text: Do you want to take covid test ?
+  
+  utter_covid_test_started:
+  - text: Covid Test Started.
+
+  utter_what_i_can_help_u_with:
+  - text: What i can help you with ?<br><br> you can type help to see what all i can do 
+
   utter_corona_food_spread:
   - text: Coronaviruses are generally thought to be spread from person-to-person through
       respiratory droplets. Currently there is no evidence to support transmission
@@ -128,3 +144,8 @@ actions:
 - utter_prevent_corona
 - utter_corona_distance
 - utter_medicines
+- utter_detect_corona
+- utter_covid_test_started
+- utter_what_i_can_help_u_with
+- action_corona_tracker
+

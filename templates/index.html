@@ -16,6 +16,10 @@
             if (user[user.length - 1] != "rasa") {
                 updateChat(response, "rasa")
                 displayChat()
+
+                if (response == "Covid Test Started.") {
+                    console.log("Covid Test Started.")
+                }
             }
         }
         window.scrollBy(0, 200);
@@ -118,7 +122,8 @@
                 var markdown_chat = chat[i].replace(/&lt;/g, "<")
                 var markdown_chat = markdown_chat.replace(/&gt;/g, ">")
 
-                final_msg = "<div class='" + className + "'><div class='msg-bubble'><div class='msg-text'>" + markdown_chat +
+                final_msg = "<div class='" + className + "'><div class='msg-bubble'><div class='msg-text'>" +
+                    markdown_chat +
                     "</div></div></div>"
 
                 msg += final_msg
@@ -157,6 +162,7 @@
         element.scrollIntoView(false);
     </script>
 
+    <!-- <script src="../static/predictions.js"></script> -->
 </body>
 
 </html>

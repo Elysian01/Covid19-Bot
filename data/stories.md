@@ -58,3 +58,21 @@
 * high_risk
    - utter_high_risk
 
+## detect_corona affirm
+* detect_corona
+  - utter_detect_corona
+* affirm
+  - utter_covid_test_started
+
+## detect_corona affirm
+* detect_corona
+  - utter_detect_corona
+* deny
+  - utter_what_i_can_help_u_with
+* help
+  - utter_help
+
+## corona tracker path
+* corona_state
+  - action_corona_tracker
+

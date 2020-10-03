@@ -23,6 +23,7 @@
 - thank
 - thank u
 - thank you
+- thanks a lot
 - thank you very much
 - thnxs
 - tks
@@ -95,6 +96,7 @@
 - how does it spread
 
 ## intent:corona_food_spread
+- how does it spread in food
 - does corona spread from food
 - how will corona spread from food
 - Can COVID-19 spread through food?
@@ -109,6 +111,7 @@
 - how to avoid getting sick from coronavirus
 - how to avoid corona
 - how not to get corona
+- what are preventive measure for corona
 
 ## intent:warm_weather
 - will warm weather stop the spread
@@ -119,3 +122,48 @@
 ## intent:high_risk
 - who is at higher risk of infection
 - who are at high risk 
+
+## intent:detect_corona
+- check whether i have corona or not
+- corona test
+- covid test
+- predict whether i have corona or not
+- detect corona within me
+- please check whether i have corona or not
+
+## intent:corona_state
+- give me [maharashtra](state) statistics
+- number of cases in [maharashtra](state) 
+- cases in [delhi](state) 
+- [india](state)
+- [maharashtra](state)
+- [karnataka](state)
+- [andra Pradesh](state)
+- [west bengal](state)
+- [odisha](state)
+- [goa](state)
+- [assam](state)
+- [punjab](state)
+- [delhi](state)
+- [bihar](state)
+- [uttar pradesh](state)
+- [gujarat](state)
+- [uttrakhand](state)
+- [chhattisgarh](state)
+- [haryana](state)
+- [himachal pradesh](state)
+- [jharkhand](state)
+- [kerala](state)
+- [madya pradesh](state)
+- [rajasthan](state)
+- [tamil nadu](state)
+- [arunanchal pradesh](state)
+- [meghalaya](state)
+- [sikkim](state)
+- [andaman and nicobar](state)
+- [mizoram](state)
+- [manipur](state)
+- [goa](state)
+- [nagaland](state)
+- [tripura](state)
+
