@@ -1,19 +1,26 @@
 console.log("Corona Detection Enabled !");
 
-
-chat = ["Hi, welcome to SimpleChat! Go ahead and send me a message"]
+chat = ["Hi, I am a COVID bot."]
 user = ["rasa"]
-var msg = ""
+var msg = "";
 
 if (sessionStorage.getItem("chat") == null)
     sessionStorage.setItem("chat", JSON.stringify(chat))
 if (sessionStorage.getItem("user") == null)
     sessionStorage.setItem("user", JSON.stringify(user))
 
+
 function getUserReq(e) {
-    // e.preventDefault()
     const request = document.getElementById("text").value
         // console.log(request)
+    let userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + request + "</div></div></div>"
+    userInput += "<div class='msg leftt-msg'><div class='msg-bubble'><div class='msg-text'>" + "typing" + "<b> . . . </b>" + "</b></div></div></div>"
+    document.querySelector(".msger-chat").innerHTML += userInput
+
+    chatWindow = document.querySelector(".msger-chat");
+    var xH = chatWindow.scrollHeight;
+    chatWindow.scrollTo(0, xH + 100);
+
     console.log(JSON.parse(sessionStorage.getItem("chat")))
     updateChat(request, "user")
     displayChat()
@@ -46,14 +53,19 @@ function displayChat() {
         else
             className = "msg left-msg"
 
-        msg += "<div class='" + className + "'><div class='msg-bubble'><div class='msg-text'>" + chat[i] + "</div></div></div>"
+        var markdown_chat = chat[i].replace(/&lt;/g, "<")
+        var markdown_chat = markdown_chat.replace(/&gt;/g, ">")
+
+        msg += "<div class='" + className + "'><div class='msg-bubble'><div class='msg-text'>" + markdown_chat + "</div></div></div>"
     }
 
-    // showMessages(msg)
 }
 
 
-
-// if (response === "Bye") {
-//     console.log("function call successful")
+// function reset() {
+//     sessionStorage.clear();
+//     const banner = "<div class='msg left-msg'><div class='msg-bubble'><div class='msg-text'>" +
+//         "Hi, I am a COVID bot. 😄" +
+//         "</div></div></div>"
+//     document.querySelector(".msger-chat").innerHTML = banner
 // }

@@ -7,14 +7,22 @@
     <script src="../static/CoronaDetection.js"></script>
     <script>
         var response = '{{ val }}';
+        chat = JSON.parse(sessionStorage.getItem("chat"))
         if (chat.length == 1 && response == "Bye")
             console.log("Chat Bot On")
         else {
-            updateChat(response, "rasa")
-            displayChat()
-            window.scrollTo(0, 480);
+            user = JSON.parse(sessionStorage.getItem("user"))
+                // To disable same o/p by chatbot after refreshing page
+            if (user[user.length - 1] != "rasa") {
+                updateChat(response, "rasa")
+                displayChat()
+            }
         }
+        window.scrollBy(0, 200);
     </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="../static/styles.css">
 
     <title>COVID BOT</title>
@@ -39,7 +47,10 @@
                     <div class="msger-header-title">
                         <h3> <span>COVID-19</span> BOT</h3>
                     </div>
-                    <button class="btn-gold">Want to know what all i can do ?</button>
+                    <div class="btns">
+                        <button class="btn-danger btn-hover" title="It will delete all the chat" onclick="reset()">Reset</button>
+                        <button class="btn-gold btn-hover" title="Wanna see, what all i can do">?</button>
+                    </div>
 
                 </header>
 
@@ -47,7 +58,7 @@
                     <div class="msg left-msg">
                         <div class="msg-bubble">
                             <div class="msg-text">
-                                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+                                Hi, I am a COVID bot. 😄
                             </div>
                         </div>
                     </div>
@@ -69,8 +80,6 @@
                         </div>
                     </div> -->
 
-
-
                 </main>
 
                 <form class="msger-inputarea" onsubmit="getUserReq(event)">
@@ -84,16 +93,69 @@
     </main>
 
     <script>
-        document.querySelector(".msger-chat").innerHTML += msg
+        const request = document.getElementById("text").value
+        if (request != "") {
+            const buffer = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + request +
+                "</div></div></div><div class='msg left-msg'><div class='msg-bubble'><div class='msg-text'>" + "..." +
+                "</div></div></div>"
+            document.querySelector(".msger-chat").innerHTML += buffer
+        }
+
+
+        if (msg != "") {
+            document.querySelector(".msger-chat").innerHTML += msg
+        } else {
+
+            chat = JSON.parse(sessionStorage.getItem("chat"))
+            user = JSON.parse(sessionStorage.getItem("user"))
+            for (let i = 1; i < user.length; i++) {
+                var className = ""
+                if (user[i] == "user")
+                    className = "msg right-msg"
+                else
+                    className = "msg left-msg"
+
+                var markdown_chat = chat[i].replace(/&lt;/g, "<")
+                var markdown_chat = markdown_chat.replace(/&gt;/g, ">")
+
+                final_msg = "<div class='" + className + "'><div class='msg-bubble'><div class='msg-text'>" + markdown_chat +
+                    "</div></div></div>"
+
+                msg += final_msg
+
+            }
+            document.querySelector(".msger-chat").innerHTML += msg
+        }
+
         chatWindow = document.querySelector(".msger-chat");
         var xH = chatWindow.scrollHeight;
-        chatWindow.scrollTo(0, xH);
+        chatWindow.scrollTo(0, xH + 100);
     </script>
 
-    <footer>
+    <footer id="footer">
+        <h2>Made By:</h2>
+        <a href="#">
+            <h2><span>Abhishek</span> Gupta</h2>
+        </a>
+        <a href="#">
+            <h2><span>Ansh</span> Chaddva</h2>
+        </a>
 
     </footer>
 
+    <script>
+        function reset() {
+            sessionStorage.clear();
+            const banner = "<div class='msg left-msg'><div class='msg-bubble'><div class='msg-text'>" +
+                "Hi, I am a COVID bot. 😄" +
+                "</div></div></div>"
+            document.querySelector(".msger-chat").innerHTML = banner
+        }
+
+
+        var element = document.getElementById("footer");
+        element.scrollIntoView(false);
+    </script>
 
 </body>
 
