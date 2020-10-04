@@ -224,7 +224,7 @@
             next_answer =
                 '<div class="msg-bubble"><div class="msg-text" id="age-text"> Please enter your age<input type="number" id="age-input" class="form-control" aria-describedby="passwordHelpBlock"><button type="button" class="btn btn-gold" id="age_go_button" onclick="age()">Go Ahead</button></div></div>';
             document.getElementById("age").innerHTML += next_answer;
-          
+            scrollChatWindow(); 
 
             document.getElementById("age-input").onkeyup = function(e){
     if(e.keyCode == 13){
@@ -281,7 +281,7 @@
                     "<div class='msg-bubble'><div class='msg-text'>Please let us know your current body temperature in degree Fahrenheit (Normal body temperature is 98.6°F):                                                                                                          <button type='button' class='btn btn-primarys btn-sm'  onclick='normal_fever()' id='normal_fever'>Normal (96°F-98.6°F)</button>   <button type='button' class='btn btn-primarys btn-sm ' id='high_fever' onclick='high_fever()'>Fever (98.6°F-102°F)</button>             </div></div>";
                 document.getElementById("temperature_question").innerHTML = next_question;
                 document.getElementById("age_go_button").disabled = true;
-            }
+            }  scrollChatWindow(); 
             document.getElementById("age-input").onkeyup = function(e){
     if(e.keyCode == 13){
         age();
@@ -560,18 +560,18 @@
             response_div.className = "msg left-msg";
             var msger_chat = document.getElementById("msger-chat");
             msger_chat.appendChild(response_div);
-                next_answer ="<div class='msg-bubble bg-yellow'><div class='msg-text'> Don't panic Seek a consultation with your doctor </div></div>";
+                next_answer ="<div class='msg-bubble bg-yellow'><div class='msg-text'> Don't panic Seek a consultation with your doctor 👨‍🔬👩‍⚕️</div></div>";
                 document.getElementById("mainresult").innerHTML += next_answer;
             } else {
                 next_answer =
-                    "<div class='msg-bubble bg-red'><div class='msg-text'>You have got COVID-19  immediately </div></div><br>";
+                    "<div class='msg-bubble bg-red'><div class='msg-text'>I am sorry to say you have COVID-19 </div></div><br>";
                 document.getElementById("main_result").innerHTML += next_answer;
                 var response_div = document.createElement("div");
             response_div.id = "mainresult";
             response_div.className = "msg left-msg";
             var msger_chat = document.getElementById("msger-chat");
             msger_chat.appendChild(response_div);
-                next_answer ="<div class='msg-bubble bg-red'><div class='msg-text'> Call the DOH hotline 02-8-561-7800 immediately </div></div>";
+                next_answer ="<div class='msg-bubble bg-red'><div class='msg-text'> Please report to nearby hospital immediately 🏥 </div></div>";
                 document.getElementById("mainresult").innerHTML += next_answer;
             }
             scrollChatWindow(); 
