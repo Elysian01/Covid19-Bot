@@ -8,6 +8,8 @@ if (sessionStorage.getItem("chat") == null)
     sessionStorage.setItem("chat", JSON.stringify(chat))
 if (sessionStorage.getItem("user") == null)
     sessionStorage.setItem("user", JSON.stringify(user))
+if (sessionStorage.getItem("coronaTest") == null)
+    sessionStorage.setItem("coronaTest", "deactive")
 
 
 function getUserReq(e) {
@@ -36,6 +38,8 @@ function updateChat(data, user) {
     b.push(user);
     sessionStorage.setItem('chat', JSON.stringify(a));
     sessionStorage.setItem('user', JSON.stringify(b));
+
+
 }
 
 function displayChat() {
@@ -61,7 +65,9 @@ function displayChat() {
 
 }
 
-
+// function startCovidTesting() {
+//     start_chatbot();
+// }
 // function reset() {
 //     sessionStorage.clear();
 //     const banner = "<div class='msg left-msg'><div class='msg-bubble'><div class='msg-text'>" +
