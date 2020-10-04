@@ -76,3 +76,39 @@
 * corona_state
   - action_corona_tracker
 
+
+## beginner path affirm
+* greet
+  - utter_greet
+* corona_intro
+  - utter_corona_intro
+* corona_spread
+  - utter_corona_spread
+* corona_symptoms
+  - utter_corona_symptoms
+* prevent_corona
+  - utter_prevent_corona
+* detect_corona
+  - utter_detect_corona
+* affirm
+  - utter_covid_test_started
+
+## beginner path deny
+* greet
+  - utter_greet
+* corona_intro
+  - utter_corona_intro
+* corona_spread
+  - utter_corona_spread
+* corona_symptoms
+  - utter_corona_symptoms
+* prevent_corona
+  - utter_prevent_corona
+* detect_corona
+  - utter_detect_corona
+* deny
+  - utter_what_i_can_help_u_with
+* help
+  - utter_help
+
+
