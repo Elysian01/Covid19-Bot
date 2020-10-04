@@ -62,7 +62,7 @@ class ActionCoronaTracker(Action):
                     confirmed = str(('{:,}'.format(int(data['confirmed']))))
                     recovered = str(('{:,}'.format(int(data['recovered']))))
 
-                    message = "Active: <b>" + active + " </b><br><br>Confirmed: <b>" + \
+                    message = "<b>"+state.title() + " Statistics :</b><br><br>Active: <b>" + active + " </b><br><br>Confirmed: <b>" + \
                         confirmed + "</b> <br><br>Recovered: <b>" + \
                         recovered + "</b><br><br>On " + \
                         data["lastupdatedtime"]
