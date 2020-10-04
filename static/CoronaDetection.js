@@ -14,6 +14,7 @@ if (sessionStorage.getItem("coronaTest") == null)
 
 function getUserReq(e) {
     const request = document.getElementById("text").value
+    updateChat(request, "user")
         // console.log(request)
     let userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + request + "</div></div></div>"
     userInput += "<div class='msg leftt-msg'><div class='msg-bubble'><div class='msg-text'>" + "typing" + "<b> . . . </b>" + "</b></div></div></div>"
@@ -24,7 +25,7 @@ function getUserReq(e) {
     chatWindow.scrollTo(0, xH + 100);
 
     console.log(JSON.parse(sessionStorage.getItem("chat")))
-    updateChat(request, "user")
+
     displayChat()
     window.scrollTo(0, 500);
 }

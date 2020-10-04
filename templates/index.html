@@ -211,26 +211,26 @@
             start_chatbot();
         }
 
-
+        // start_chatbot();
         function start_chatbot() {
             sessionStorage.setItem("coronaTest", "deactive")
             document.getElementById("user-enter-text").style.display = "none";
-            var response_div = document.createElement("div");
-            response_div.id = "age";
-            response_div.className = "msg right-msg";
-            var msger_chat = document.getElementById("msger-chat");
-            msger_chat.appendChild(response_div);
+            // var response_div = document.createElement("div");
+            // response_div.id = "age";
+            // response_div.className = "msg right-msg";
+            // var msger_chat = document.getElementById("msger-chat");
+            // msger_chat.appendChild(response_div);
 
-            next_answer =
-                '<div class="msg-bubble"><div class="msg-text" id="age-text"> Please enter your age<input type="number" autofocus id="age-input" class="form-control" aria-describedby="passwordHelpBlock"><button type="button" class="btn btn-gold" id="age_go_button" onclick="age()">Go Ahead</button></div></div>';
-            document.getElementById("age").innerHTML += next_answer;
+            // next_answer =
+            //     '<div class="msg-bubble"><div class="msg-text" id="age-text"> Please enter your age<input type="number" autofocus id="age-input" class="form-control" aria-describedby="passwordHelpBlock"><button type="button" class="btn btn-gold" id="age_go_button" onclick="age()">Go Ahead</button></div></div>';
+            // document.getElementById("age").innerHTML += next_answer;
             scrollChatWindow();
-
-            document.getElementById("age-input").onkeyup = function(e) {
-                if (e.keyCode == 13) {
-                    age();
-                }
-            }
+            age();
+            // document.getElementById("age-input").onkeyup = function(e) {
+            //     if (e.keyCode == 13) {
+            //         age();
+            //     }
+            // }
 
         }
 
@@ -252,49 +252,49 @@
 
         function age() {
             scrollChatWindow();
-            var age_validation_result = validate_age();
+            // var age_validation_result = validate_age();
             //create element
             var response_div = document.createElement("div");
             response_div.id = "temperature_question";
             response_div.className = "msg left-msg ";
             //append that element
 
-            if (age_validation_result != "OK") {
+            // if (age_validation_result != "OK") {
 
 
-                if (document.getElementById("age_validation_result")) {
-                    var next_question = age_validation_result;
-                    document.getElementById("age_validation_result").innerHTML = "";
-                    document.getElementById("age_validation_result").innerHTML = next_question;
-                } else {
-                    var msger_chat = document.getElementById("msger-chat");
-                    msger_chat.appendChild(response_div);
-                    var next_question = "<div id='age_validation_result'>" + age_validation_result + "</div>";
-                    document.getElementById("age-text").innerHTML += next_question;
-                }
+            //     if (document.getElementById("age_validation_result")) {
+            //         var next_question = age_validation_result;
+            //         document.getElementById("age_validation_result").innerHTML = "";
+            //         document.getElementById("age_validation_result").innerHTML = next_question;
+            //     } else {
+            //         var msger_chat = document.getElementById("msger-chat");
+            //         msger_chat.appendChild(response_div);
+            //         var next_question = "<div id='age_validation_result'>" + age_validation_result + "</div>";
+            //         document.getElementById("age-text").innerHTML += next_question;
+            //     }
 
 
 
-            } else {
+            // } else {
 
 
-                var msger_chat = document.getElementById("msger-chat");
-                msger_chat.appendChild(response_div);
-                // document.getElementById("age_validation_result").innerText ="";
-                var next_question =
-                    "<div class='msg-bubble'><div class='msg-text'>Please let us know your current body temperature in degree Fahrenheit (Normal body temperature is 98.6°F):                                                                                                          <button type='button' class='btn btn-primarys btn-sm'  onclick='normal_fever()' id='normal_fever'>Normal (96°F-98.6°F)</button>   <button type='button' class='btn btn-primarys btn-sm ' id='high_fever' onclick='high_fever()'>Fever (98.6°F-102°F)</button>             </div></div>";
-                document.getElementById("temperature_question").innerHTML = next_question;
-                document.getElementById("age_go_button").disabled = true;
-                updateChat(
+            var msger_chat = document.getElementById("msger-chat");
+            msger_chat.appendChild(response_div);
+            // document.getElementById("age_validation_result").innerText ="";
+            var next_question =
+                "<div class='msg-bubble'><div class='msg-text'>Please let us know your current body temperature in degree Fahrenheit (Normal body temperature is 98.6°F):                                                                                                          <button type='button' class='btn btn-primarys btn-sm'  onclick='normal_fever()' id='normal_fever'>Normal (96°F-98.6°F)</button>   <button type='button' class='btn btn-primarys btn-sm ' id='high_fever' onclick='high_fever()'>Fever (98.6°F-102°F)</button>             </div></div>";
+            document.getElementById("temperature_question").innerHTML = next_question;
+            // document.getElementById("age_go_button").disabled = true;
+            updateChat(
                     "Please let us know your current body temperature in degree Fahrenheit (Normal body temperature is 98.6°F)",
                     "rasa")
-            }
+                // }
             scrollChatWindow();
-            document.getElementById("age-input").onkeyup = function(e) {
-                if (e.keyCode == 13) {
-                    age();
-                }
-            }
+            // document.getElementById("age-input").onkeyup = function(e) {
+            //     if (e.keyCode == 13) {
+            //         age();
+            //     }
+            // }
 
         }
 
