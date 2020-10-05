@@ -5,7 +5,7 @@ An awesome Covid 19 bot which helps in predicting covid, provides the statistics
 <img src ="static/botLogo.jpg" width="500px" height = "500px">
  
 # Getting started
-## Please refer to this [document file](static/installation.docx) to install all the pre-requiste and set up the environment.
+## Please refer to this [document file](static/installation.docx) to install all the pre-requiste and set up the conda environment for rasa.
 
 # To run the application
 To directly run the application open three shell side by side and activate the environment in each of them.
