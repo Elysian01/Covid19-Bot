@@ -7,7 +7,7 @@ An awesome Covid 19 bot which helps in predicting covid, provides the statistics
 # Getting started
 ## Please refer to this [document file](static/installation.docx) to install all the pre-requiste and set up the environment.
 
-# Directly run the application
+# To run the application
 To directly run the application open three shell side by side and activate the environment in each of them.
 ```bash
 conda activate rasa
