@@ -22,7 +22,7 @@ rasa run actions
 rasa run -m models --enable-api
 ```
 
-## Open your browser go to http://127.0.0.1:5000/ and enjoy the experience
+### Open your browser go to 'http://127.0.0.1:5000/' and enjoy the experience
 
 
 
