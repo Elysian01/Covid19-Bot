@@ -132,6 +132,7 @@
 - give me total number of cases in [india](state)
 - total cases in [maharashtra](state)
 - cases in [delhi](state) 
+- How many cases are there in [maharashtra](state)
 - [india](state)
 - [maharashtra](state)
 - [karnataka](state)

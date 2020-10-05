@@ -39,7 +39,7 @@ responses:
   - text: I am a COVID bot
   utter_help:
   - text: I can answer to questions related to what is corona, its symptoms, preventive
-      measures, its spreading in warm weather or in general, who are at high risk,
+      measures, its spreading in warm weather or in general, who are at high risk,<br><br>click on above ? button to get more info
       <br><br><b> I can also check whether u are suffering from corona or not ( type
       -> corona test)</b>
   utter_medicines:

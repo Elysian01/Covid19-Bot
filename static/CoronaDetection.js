@@ -48,10 +48,12 @@ function displayChat() {
     user = JSON.parse(sessionStorage.getItem("user"))
     console.log(chat)
     console.log(user)
-
-    // const userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + request + "</div></div></div>"
-    // document.querySelector(".msger-chat").innerHTML += userInput
-    for (let i = 1; i < user.length; i++) {
+    let start = 1
+        // const userInput = "<div class='msg right-msg'><div class='msg-bubble'><div class='msg-text'>" + request + "</div></div></div>"
+        // document.querySelector(".msger-chat").innerHTML += userInput
+    if (chat[0] != "Hi, I am a COVID bot.")
+        start = 0
+    for (let i = start; i < user.length; i++) {
         var className = ""
         if (user[i] == "user")
             className = "msg right-msg"
