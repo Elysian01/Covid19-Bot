@@ -5,7 +5,7 @@ An awesome A.I based Covid 19 bot which helps in predicting covid in a person, p
 <img src ="static/demo.gif" width="360px" height = "640px">
 
 # Getting started
-## Please refer to this [document file](static/installation.docx) to install all the pre-requiste and set up the conda environment for rasa.
+## Please refer to this [document file](https://docs.google.com/document/d/12m7BJXUrSxJcMBTmk9V3AMghKKBDMez7er5q5KejNtg/edit?usp=sharing) to install all the pre-requiste and set up the conda environment for rasa.
 
 # To run the application
 To directly run the application open three shell side by side and activate the environment in each of them.
